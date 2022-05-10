@@ -3,7 +3,7 @@ LINUX_VERSION_SUFFIX = "-lts"
 
 LIC_FILES_CHKSUM = "file://COPYING;md5=6bc538ed5bd9a7fc9398086aedcd7e46"
 
-SRCREV = "757d1b33719285e2a22c8eff3289716ac60a70ec"
+SRCREV = "258fa55fdf73b4932afa077033af5f22d92559e2"
 
 include linux-socfpga.inc
 
