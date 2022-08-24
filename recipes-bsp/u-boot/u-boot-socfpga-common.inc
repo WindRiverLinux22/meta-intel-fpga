@@ -26,27 +26,6 @@ RPROVIDES:${PN} = "u-boot"
 
 SRC_URI = "${UBOOT_REPO};protocol=${UBOOT_PROT};branch=${UBOOT_BRANCH}"
 
-UBOOT_CONFIG[agilex-socdk] = "socfpga_agilex_legacy_defconfig"
-UBOOT_CONFIG[agilex-socdk-atf] = "socfpga_agilex_defconfig"
-UBOOT_CONFIG[agilex-socdk-qspi] = "socfpga_agilex_qspi_legacy_defconfig"
-UBOOT_CONFIG[agilex-socdk-qspi-atf] = "socfpga_agilex_defconfig"
-UBOOT_CONFIG[stratix10-socdk] = "socfpga_stratix10_legacy_defconfig"
-UBOOT_CONFIG[stratix10-socdk-atf] = "socfpga_stratix10_defconfig"
-UBOOT_CONFIG[stratix10-socdk-qspi] = "socfpga_stratix10_qspi_legacy_defconfig"
-UBOOT_CONFIG[stratix10-socdk-qspi-atf] = "socfpga_stratix10_defconfig"
-UBOOT_CONFIG[arria10-socdk] = "socfpga_arria10_defconfig"
-UBOOT_CONFIG[arria10-socdk-nand] = "socfpga_arria10_nand_defconfig"
-UBOOT_CONFIG[arria10-socdk-qspi] = "socfpga_arria10_qspi_defconfig"
-UBOOT_CONFIG[cyclone5-socdk] = "socfpga_cyclone5_defconfig"
-UBOOT_CONFIG[de0-nano-soc] = "socfpga_de0_nano_soc_defconfig"
-UBOOT_CONFIG[de10-nano-soc] = "socfpga_de10_nano_defconfig"
-UBOOT_CONFIG[mcvevk] = "socfpga_mcvevk_defconfig"
-UBOOT_CONFIG[sockit] = "socfpga_sockit_defconfig"
-UBOOT_CONFIG[socrates] = "socfpga_socrates_defconfig"
-UBOOT_CONFIG[sr1500] = "socfpga_sr1500_defconfig"
-UBOOT_CONFIG[arria5-socdk] = "socfpga_arria5_defconfig"
-UBOOT_CONFIG[n5x-socdk-atf] = "socfpga_n5x_defconfig"
-
 do_compile:prepend() {
 	if [ -n "${COMPILE_PREPEND_FILES}" ]; then
 		if [ -n "${UBOOT_CONFIG}" ]; then
